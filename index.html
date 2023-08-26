@@ -75,28 +75,30 @@
   /* Animation for changing text color */
    animation: changeTextColor 13s infinite
   }
-  .image-container {
+  .container {
     position: relative;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #ffffff; /* White background */
   }
 
   .flag-image {
     max-width: 100%;
     height: auto;
-    z-index: 2;
   }
 
   .text {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    bottom: 10px;
     font-size: 14px;
     color: white;
     text-align: center;
     width: 100%;
     pointer-events: none; /* To prevent interaction with the text */
-    z-index: 3; /* Place the text above other elements */
+    z-index: 2; /* Place the text above other elements */
   }
 
 .rope {
@@ -209,9 +211,9 @@
 </head>
 <body>
 
-<div class="image-container">
+<div class="container">
   <img src="1.png" alt="Soviet Union Flag" class="flag-image">
-  <div class="text">تولدت مبارک الیناssssssغاااااااا</div>
+  <div class="text">تولدت مبارک الیناااااااااااا</div>
 </div>
 
 <script>
