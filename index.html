@@ -75,19 +75,25 @@
   /* Animation for changing text color */
    animation: changeTextColor 13s infinite
   }
+ body {
+    margin: 0;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
   .container {
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
-    background-color: #ffffff;
+    position: relative;
   }
 
   .flag-image {
     width: 100%;
-    height: auto;
     max-width: 600px; /* Adjust the maximum width as needed */
   }
 
@@ -97,7 +103,7 @@
     font-size: 14px;
     color: white;
     text-align: center;
-    max-width: 100%;
+    max-width: 90%; /* Adjust the width as needed */
     pointer-events: none;
     z-index: 2;
   }
@@ -114,11 +120,6 @@
   z-index: -1; /* Place the rope behind the balloon */
 }
   /* Your other styles... */
-  body {
-    margin: 0;
-    background-color: #ffffff;
-  }
-
 
   .balloon {
     position: absolute;
@@ -206,15 +207,24 @@
   }
 
 }
+	  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+
+    .text {
+      position: static;
+      margin-top: 10px;
+    }
+  }
 </style>
 </head>
 <body>
 
 <div class="container">
   <img src="1.png" alt="Soviet Union Flag" class="flag-image">
-  <div class="text">تولدت مبارک الیناااااااااااا</div>
+  <div class="text">تولدت مبارکssss الیناااااااااااا</div>
 </div>
-
 
 <script>
   const balloonColors = [
