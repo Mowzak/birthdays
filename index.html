@@ -75,7 +75,16 @@
   /* Animation for changing text color */
    animation: changeTextColor 13s infinite
   }
+.image-container {
+    position: relative;
+    text-align: center;
+  }
 
+  .flag-image {
+    max-width: 100%;
+    height: auto;
+    z-index: 2;
+  }
 
   .text {
     position: absolute;
@@ -87,15 +96,9 @@
     text-align: center;
     width: 100%;
     pointer-events: none; /* To prevent interaction with the text */
+    z-index: 3; /* Place the text above other elements */
   }
-.flag-image {
-  position: absolute;
-  top: 20px; /* Adjust the positioning as needed */
-  left: 50%;
-  transform: translateX(-50%);
-  width: 600px; /* Adjust the width as needed */
-  z-index: 2; /* Place the flag above other elements */
-}
+
 .rope {
   position: absolute;
   width: 1px;
