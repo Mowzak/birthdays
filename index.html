@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  :root {
+  --sunny-yellow: #F9DC5C;
+  --bubbly-orange: #FFA34D;
+  --cheerful-coral: #FF6B6B;
+  --vibrant-pink: #FF6ACD;
+  --playful-peach: #FF9E6B;
+  --lively-lavender: #B788FF;
+  --joyful-jade: #6BFFD4;
+  --blissful-blue: #6BA0FF;
+  --radiant-red: #FF6B6B;
+  --merry-magenta: #FF6ACD;
+  --giddy-green: #9EFF6B;
+  --buoyant-bubblegum: #FF6BB0;
+  --ecstatic-emerald: #6BFFD4;
+  --delightful-turquoise: #6BB0FF;
+  --gleeful-gold: #FFD06B;
+  --bouncy-berry: #B788FF;
+  --jovial-jasmine: #6BFFD4;
+  --exuberant-ebony: #6B6B6B;
+  --zestful-zaffre: #6B6BFF;
+  --peppy-periwinkle: #6B6BB0;
+  --festive-fuchsia: #FF6ACD;
+  --mirthful-mauve: #FF6BB0;
+  --chirpy-chartreuse: #9EFF6B;
+  --sparkling-salmon: #FF6B6B;
+  --upbeat-ultramarine: #6B6BB0;
+  --hilarious-honeydew: #9EFF6B;
+  --jubilant-jaune: #FFD06B;
+  --spirited-sapphire: #6B6BFF;
+  --mellow-melon: #FFD06B;
+  --radiant-rose: #FF6B6B;
+  --breezy-beige: #FFE7A4;
+  --energetic-emerald: #00FF88;
+  --joyous-jaffa: #FF8200;
+  --buoyant-berry: #FF5E5E;
+  --festive-fandango: #FF5470;
+  --happy-heliotrope: #C95BFF;
+  --vivid-viridian: #00FFBC;
+  --optimistic-olive: #BFFF00;
+  --brilliant-burgundy: #C70039;
+  --zesty-zucchini: #A0E57C;
+  --marvelous-mango: #FFA500;
+  --dynamic-denim: #56A3A6;
+  --jubilant-juniper: #00A572;
+  --blossoming-blush: #FF7D7D;
+  --blazing-buttercup: #F9C80E;
+  --delightful-dandelion: #FFDB58;
+  --electric-eggplant: #9B59B6;
+  --exhilarating-ecru: #C3C3C3;
+  --sparkling-spring: #00EABD;
+  --cheery-crimson: #E63946;
+  --glowing-grapefruit: #FF5858;
+  --zany-zaffron: #FF9933;
+  --majestic-maroon: #800000;
+  --tealicious-turquoise: #32D2B0;
+
+--tangelo: #fb5012ff;
+--fluorescent-cyan: #01fdf6ff;
+--periwinkle: #cbbaedff;
+--aureolin: #e9df00ff;
+--aquamarine: #03fcbaff;
+
+--red-crayola: #ed254eff;
+--naples-yellow: #f9dc5cff;
+--tea-green: #c2eabdff;
+--oxford-blue: #011936ff;
+--charcoal: #465362ff;
+
+  /* Animation for changing text color */
+   animation: changeTextColor 13s infinite
+  }
+
+
+  .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    color: white;
+    text-align: center;
+    width: 100%;
+    pointer-events: none; /* To prevent interaction with the text */
+  }
+.flag-image {
+  position: absolute;
+  top: 20px; /* Adjust the positioning as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px; /* Adjust the width as needed */
+  z-index: 2; /* Place the flag above other elements */
+}
+.rope {
+  position: absolute;
+  width: 1px;
+  height: 30px; /* Adjust the rope length as needed */
+  background-color: black; /* Color of the rope */
+  bottom: -30px; /* Position the rope above the balloon */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1; /* Place the rope behind the balloon */
+}
+  /* Your other styles... */
+  body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ffffff; /* White background */
+  }
+
+  .balloon {
+    position: absolute;
+    width: 50px;
+    height: 80px;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    animation: move 8s ease-in-out infinite, rise 10s linear infinite;
+    transform: translateY(100vh) scale(0.5); /* Start off-screen at the bottom */
+  }
+
+  @keyframes rise {
+    0% {
+      transform: translateY(100vh) scale(0.5);
+    }
+    100% {
+      transform: translateY(-100vh) scale(1);
+    }
+  }
+
+  .text {
+    font-size: 96px; /* Larger text size */
+    color: var(--verdigris);
+    font-weight: bold;
+    margin-bottom: 30px;
+
+ animation: var(--color-animation);
+  }
+@keyframes changeTextColor {
+  5% {
+    color: var(--bubbly-orange);
+  }
+  10% {
+    color: var(--cheerful-coral);
+  }
+  15% {
+    color: var(--vibrant-pink);
+  }
+  20% {
+    color: var(--playful-peach);
+  }
+  25% {
+    color: var(--lively-lavender);
+  }
+  30% {
+    color: var(--joyful-jade);
+  }
+  35% {
+    color: var(--blissful-blue);
+  }
+  40% {
+    color: var(--radiant-red);
+  }
+  45% {
+    color: var(--merry-magenta);
+  }
+  50% {
+    color: var(--giddy-green);
+  }
+  55% {
+    color: var(--buoyant-bubblegum);
+  }
+  60% {
+    color: var(--ecstatic-emerald);
+  }
+  65% {
+    color: var(--delightful-turquoise);
+  }
+  70% {
+    color: var(--gleeful-gold);
+  }
+  75% {
+    color: var(--bouncy-berry);
+  }
+  80% {
+    color: var(--jovial-jasmine);
+  }
+  85% {
+    color: var(--exuberant-ebony);
+  }
+  90% {
+    color: var(--zestful-zaffre);
+  }
+  95% {
+    color: var(--peppy-periwinkle);
+  }
+
+}
+</style>
+</head>
+<body>
+
+<div class="image-container">
+  <img src="1.png" alt="Soviet Union Flag" class="flag-image">
+  <div class="text">تولدت مبارک الیناااااااااااا</div>
+</div>
+
+<script>
+  const balloonColors = [
+     'sunny-yellow',
+    'bubbly-orange',
+    'cheerful-coral',
+    'vibrant-pink',
+    'playful-peach',
+    'lively-lavender',
+    'joyful-jade',
+    'blissful-blue',
+    'radiant-red',
+    'merry-magenta',
+    'giddy-green',
+    'buoyant-bubblegum',
+    'ecstatic-emerald',
+    'delightful-turquoise',
+    'gleeful-gold',
+    'bouncy-berry',
+    'jovial-jasmine',
+    'exuberant-ebony',
+    'zestful-zaffre',
+    'peppy-periwinkle',
+    'festive-fuchsia',
+    'mirthful-mauve',
+    'chirpy-chartreuse',
+    'sparkling-salmon',
+    'upbeat-ultramarine',
+    'hilarious-honeydew',
+    'jubilant-jaune',
+    'spirited-sapphire',
+    'mellow-melon',
+    'radiant-rose',
+    'breezy-beige',
+    'energetic-emerald',
+    'joyous-jaffa',
+    'buoyant-berry',
+    'festive-fandango',
+    'happy-heliotrope',
+    'vivid-viridian',
+    'optimistic-olive',
+    'brilliant-burgundy',
+    'zesty-zucchini',
+    'marvelous-mango',
+    'dynamic-denim',
+    'jubilant-juniper',
+    'blossoming-blush',
+    'blazing-buttercup',
+    'delightful-dandelion',
+    'electric-eggplant',
+    'exhilarating-ecru',
+    'sparkling-spring',
+    'cheery-crimson',
+    'glowing-grapefruit',
+    'zany-zaffron',
+    'majestic-maroon',
+    'tealicious-turquoise',
+'tangelo',
+'fluorescent-cyan',
+'periwinkle',
+'aureolin',
+ 'aquamarine',
+  ];
+	
+for (let i = 0; i < 200; i++) {
+    const delay = Math.random() * 10; // Random delay between 0 and 10 seconds
+    const left = Math.random() * 100; // Random left position between 0% and 100%
+    const colorIndex = Math.floor(Math.random() * balloonColors.length);
+    const balloon = document.createElement('div');
+    balloon.className = 'balloon';
+    balloon.style.left = `${left}%`;
+    balloon.style.animationDelay = `${delay}s`;
+    balloon.style.backgroundColor = `var(--${balloonColors[colorIndex]})`;
+    
+    const rope = document.createElement('div');
+    rope.className = 'rope';
+    balloon.appendChild(rope);
+    
+    document.body.appendChild(balloon);
+  }
+</script>
+</body>
+</html>
