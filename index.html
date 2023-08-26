@@ -82,13 +82,13 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-color: #ffffff; /* White background */
+    background-color: #ffffff;
   }
 
   .flag-image {
-	  top:10px;
     width: 100%;
     height: auto;
+    max-width: 600px; /* Adjust the maximum width as needed */
   }
 
   .text {
@@ -98,9 +98,10 @@
     color: white;
     text-align: center;
     max-width: 100%;
-    pointer-events: none; /* To prevent interaction with the text */
-    z-index: 2; /* Place the text above other elements */
+    pointer-events: none;
+    z-index: 2;
   }
+
 
 .rope {
   position: absolute;
@@ -115,12 +116,9 @@
   /* Your other styles... */
   body {
     margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #ffffff; /* White background */
+    background-color: #ffffff;
   }
+
 
   .balloon {
     position: absolute;
@@ -214,8 +212,9 @@
 
 <div class="container">
   <img src="1.png" alt="Soviet Union Flag" class="flag-image">
-  <div class="text">تولدت ffffمبارک الیناااااااااااا</div>
+  <div class="text">تولدت مبارک الیناااااااااااا</div>
 </div>
+
 
 <script>
   const balloonColors = [
